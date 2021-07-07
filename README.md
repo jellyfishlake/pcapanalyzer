@@ -1,5 +1,5 @@
 # neuralmalwaredoctor 👽
-Malware detection programm which utilizes deep learning approaches 👨‍💻
+Malware detection program which utilizes deep learning approaches 👨‍💻
 :dancer: :coffee:
 
 # Requirements
