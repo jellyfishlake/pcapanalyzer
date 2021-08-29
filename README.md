@@ -4,9 +4,11 @@ This is an approach to analyze and identify malicious traffic in packet captures
 
 # Install
 
+##
+
 The setup comes with with a small install script.
 
-# Detailed Requirements
+> `sh setup.sh`
 
 ## Tranalyzer
 Tranalyzer is a powerful tool to extract useful information from packet captures like the raw .pcap format.
