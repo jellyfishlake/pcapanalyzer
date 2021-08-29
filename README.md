@@ -2,9 +2,18 @@
 This is an approach to analyze and identify malicious traffic in packet captures utilizing Machine Learning algorithms 👨‍💻
 :dancer: :coffee:
 
-# Requirements
+# Install
 
-Tested on Python 3.8, Fedora 33.
+The setup comes with with a small install script.
+
+# Detailed Requirements
+
+## Tranalyzer
+Tranalyzer is a powerful tool to extract useful information from packet captures like the raw .pcap format.
+
+## System
+
+The tool was tested on Ubuntu 20.04 LTS having Python 3.8 environment installed.
 
 # Description
 
