@@ -12,8 +12,8 @@ The setup comes with with a small install script but some packets like pip and g
 It is recommendend to switch to a virtual environment to not interfere with current environment.
 
 > `sudo pip3 install virtualenv` </br>
-> `virtualenv -p /usr/bin/python3.8 pcapanalyzer` </br>
-> `source pcapanalyzer/bin/activate`
+> `virtualenv -p /usr/bin/python3.8 venv` </br>
+> `source venv/bin/activate`
 
 Then execute the following commands. Please note, that installing Tranalyzer will be installed on the system.
 
