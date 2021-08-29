@@ -14,8 +14,8 @@ The setup comes with with a small install script. It is recommendend to switch t
 
 Then
 
-> `git clone https://github.com/jellyfishlake/pcapanalyzer.git`
-> `cd pcapanalyzer`
+> `git clone https://github.com/jellyfishlake/pcapanalyzer.git` </br>
+> `cd pcapanalyzer` </br>
 > `sh setup.sh`
 
 ## Dependencies
