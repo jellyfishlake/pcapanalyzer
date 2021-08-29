@@ -5,7 +5,7 @@ The idea behind this project was to contribute digital forensic community and th
 
 # Install
 
-The setup comes with with a small install script.
+The setup comes with with a small install script. It is recommendend to switch to a virtual environment before installation.
 
 > `sh setup.sh`
 
