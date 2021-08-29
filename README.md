@@ -15,8 +15,11 @@ Tranalyzer is a powerful tool to extract useful information from packet captures
 
 ## System
 
-The tool was tested on Ubuntu 20.04 LTS having Python 3.8 environment installed.
+The tool was tested on `Ubuntu 20.04 LTS` having Python 3.8 environment installed.
+We assume CentOS/Fedora/Red Hat distributions and more should work as well as long Python3.8 is installed.
 
-# Description
+# Usage
+
+After setup is done, now you should be able to run following commands from the CLI
 
 > `python3.8 predict.py --loadmodel ./model.h5 --pcap sample.pcap`
