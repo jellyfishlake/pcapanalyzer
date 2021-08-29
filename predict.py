@@ -1,25 +1,12 @@
-from pycaret.classification import *
-from pycaret.datasets import get_data
+import sys, argparse, os
 import pandas as pd
 import jinja2
-import sys, argparse, os
+from pycaret.classification import *
+from pycaret.datasets import get_data
 from datetime import datetime
 from datetime import date
 from xhtml2pdf import pisa
-'''
-from reportlab.pdfgen.canvas import Canvas
-from reportlab.lib.units import inch
-from reportlab.lib.pagesizes import letter
-from reportlab.lib.pagesizes import A4
-from reportlab.lib.units import inch
-from reportlab.lib.units import cm
-from reportlab.lib.colors import HexColor
-from reportlab.lib import colors
-from reportlab.lib.pagesizes import letter, inch
-from reportlab.platypus import SimpleDocTemplate, Table, TableStyle
-from report.pdfmaker import create_report
-from report.report_test import get_reporting
-'''
+
 
 
 
@@ -47,7 +34,7 @@ def pcap_to_predict(arguments):
         flows = dftmp
         
         # Drop uneeded columns
-        dftmp = dftmp.drop(['timeFirst', 'timeLast', 'dstPortClass','fname', 'srcIP','dstIP', 'l4Proto', 'httpHosts', 'httpMimes', 'httpUsrAg', 'dnsAname', 'sslServerName'], axis=1)
+        dftmp = dftmp.drop(['timeFirst', 'timeLast', 'dstPortClass', 'srcIP','dstIP', 'l4Proto', 'httpHosts', 'httpMimes', 'httpUsrAg', 'dnsAname', 'sslServerName'], axis=1)
         
         # Here comes the prediction
         model = load_model(arguments['argmodel'])
@@ -55,9 +42,6 @@ def pcap_to_predict(arguments):
         preds = predictions['Label'].value_counts()
         flows['Label'] = predictions['Label']
         flows['Score'] = predictions['Score']
-        
-        # Save predictions to csv
-        #predictions.to_csv("predictions_" + os.path.basename(arguments['argpcap']) + ".csv",index=False)
 
         return preds, httphosts, sslserver, predictions, flows, mode
 
@@ -143,9 +127,6 @@ def main(argv):
     
     df_multiclass = df[(df['Label'] == 2) | (df['Label'] == 3) | (df['Label'] == 4)]
     df_multiclass = df_multiclass.sort_values(by='Score', ascending=False)
-    #df_multiclass['Label'] = df_multiclass[df_multiclass['Label'] == 3] = 'Trickbot'
-    #df_multiclass['Label'] = df_multiclass[df_multiclass['Label'] == 2] = 'RigEK'
-    #df_multiclass['Label'] = df_multiclass[df_multiclass['Label'] == 4] = 'CobaltStrike'
     get_reporting(reportdata,httphosts, sslserver, df, df_multiclass)
 
  
