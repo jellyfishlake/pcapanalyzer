@@ -1,4 +1,4 @@
-# neuralmalwaredoctor 👽
+# Packet Capture 👽
 Malware detection program which utilizes deep learning approaches 👨‍💻
 :dancer: :coffee:
 
