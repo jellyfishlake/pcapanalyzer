@@ -1,0 +1,247 @@
+<html>
+
+
+<head>
+    <style type="text/css">
+        html, body {
+            width: 500px;
+            font-size: 12px;
+            background: #fff;
+            padding: 0px;
+        }
+        #my-custom-table {
+            width: 500px;
+            border: 0;
+            margin-top: 20px;
+        }
+        #my-custom-table td {
+            padding: 5px 0px 1px 5px;
+            text-align: left;
+        }
+        a { color: hotpink; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+
+<table cellspacing="0" border="0" style="width:500px; border:0; font-size: 14px;">
+    <tr>
+        <td style="text-align:left;">
+              <b><span>Prediction Report</span></b>
+        </td>
+        <td style="text-align:right;">
+            <b><span>{{ datetime }},</span></b>
+            <b><span>{{ date }}</span></b>
+
+        </td>
+    </tr>
+</table>
+<p style="text-align:center;">
+              <b><span>{{ reportdata['pcap'] }}</span></b>
+        </p>
+<p>Mode: {{ reportdata['mode'] }}, Classifier: Random Forest</p>
+<table cellspacing="0" border="0" id="my-custom-table">
+    <tr style="font-size: 20px;
+               border-top: 1px solid black;
+               border-bottom: 1px solid black;
+               font-weight: bold;">
+        <td>Binary Score Report</td>
+    </tr>
+    <tr style="border-top: 1px solid black;
+               border-bottom: 0.1px solid black;
+               font-weight: bold;">
+        <td>Range</td>
+        <td>Benign</td>
+        <td>Malicious</td>
+    </tr>
+     <tr>
+        <td>Prediction Score 0-10%</td>
+        <td>{{ reportdata['ben0010'] }}</td>
+        <td>{{ reportdata['mal0010'] }}</td>
+       
+    </tr>
+     <tr>
+        <td>Prediction Score 10-20%</td>
+        <td>{{ reportdata['ben1020'] }}</td>
+        <td>{{ reportdata['mal1020'] }}</td>
+       
+    </tr>
+      <tr>
+        <td>Prediction Score 20-30%</td>
+        <td>{{ reportdata['ben2030'] }}</td>
+        <td>{{ reportdata['mal2030'] }}</td>
+       
+    </tr>
+      <tr>
+        <td>Prediction Score 30-40%</td>
+        <td>{{ reportdata['ben3040'] }}</td>
+        <td>{{ reportdata['mal3040'] }}</td>
+       
+    </tr>
+      <tr>
+        <td>Prediction Score 40-50%</td>
+        <td>{{ reportdata['ben4050'] }}</td>
+        <td>{{ reportdata['mal4050'] }}</td>
+       
+    </tr>
+    <tr>
+        <td>Prediction Score 50-60%</td>
+        <td>{{ reportdata['ben5060'] }}</td>
+        <td>{{ reportdata['mal5060'] }}</td>
+       
+    </tr>
+    <tr>
+        <td>Prediction Score 60-70%</td>
+        <td>{{ reportdata['ben6070'] }}</td>
+        <td>{{ reportdata['mal6070'] }}</td>
+    </tr>
+    <tr>
+        <td>Prediction Score 70-80%</td>
+        <td>{{ reportdata['ben7080'] }}</td>
+        <td>{{ reportdata['mal7080'] }}</td>
+    </tr>
+    <tr>
+        <td>Prediction Score 80-90%</td>
+        <td>{{ reportdata['ben8090'] }}</td>
+        <td>{{ reportdata['mal8090'] }}</td>
+    </tr>
+    <tr>
+        <td>Prediction Score 90-100%</td>
+        <td>{{ reportdata['ben9010'] }}</td>
+        <td>{{ reportdata['mal9010'] }}</td>
+    </tr>
+    <tr style="border-top: 1px solid black;">
+        <td>Total ({{ reportdata['total'] }})</td>
+        <td>{{ reportdata['benflows'] }}</td>
+        <td>{{ reportdata['malflows'] }}</td>
+    </tr>
+</table>
+<table cellspacing="0" border="0" id="my-custom-table">
+    <tr style="font-size: 20px;
+               text-align:left;
+               border-top: 1px solid black;
+               border-bottom: 1px solid black;
+               font-weight: bold;">
+        <td>Malware Family</td>
+    </tr>
+    <tr style="border-top: 0.1px solid black;
+               border-bottom: 1px solid black;
+               font-weight: bold;">
+        <td>Malware Family</td>
+        <td>RigEK</td>
+        <td>Trickbot</td>
+        <td>CobaltStrike</td>
+    </tr>
+    <tr>
+        <td>Predictions </td>
+        <td>{{ reportdata['rigek'] }}</td>
+        <td>{{ reportdata['trickbot'] }}</td>
+        <td>{{ reportdata['cobaltstrike'] }}</td>
+    </tr>
+</table>
+<table cellspacing="0" border="0" id="my-custom-table">
+    {% for a,b in df[3].iterrows()%}
+    {% if loop.index0 == 0 %}
+    <tr style="border-top: 1px solid black;
+               border-bottom: 1px solid black;
+               font-weight: bold;">
+        <td>Flow</td>
+        <td>srcIP</td>
+        <td>dstIP</td>
+        <td>srcPort</td>
+        <td>dstPort</td>
+        <td>Protocol</td>
+        <td>Label</td>
+        <td>Score</td>
+    </tr>
+    {% else %}
+    <tr>
+        <td>{{ a }}</td>
+        <td>{{ b['srcIP'] }}</td>
+        <td>{{ b['dstIP'] }}</td>
+        <td>{{ b['srcPort'] }}</td>
+        <td>{{ b['dstPort'] }}</td>
+        <td>{{ b['l4Proto'] }}</td>
+        <td>{{ b['Label'] }}</td>
+        <td>{{ b['Score'] }}</td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+
+</table>
+<table cellspacing="0" border="0" id="my-custom-table">
+    
+    {% for variable_name, variable_value in df[1].iteritems() %}
+    {% if loop.index0 == 0 %}
+    <tr style="border-top: 1px solid black;
+               border-bottom: 1px solid black;
+               font-weight: bold;">
+        <td>Malicious Predicted SSL Server Domain</td>
+        <td>Count</td>
+    </tr>
+    {% else %}
+    <tr>
+        <td><a href="https://virustotal.com/gui/domain/{{ variable_name }}">{{ variable_name }}</a></td>
+        <td>{{ variable_value }}</td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+</table>
+<table cellspacing="0" border="0" id="my-custom-table">
+    {% for variable_name, variable_value in df[0].iteritems() %}
+    {% if loop.index0 == 0 %}
+    <tr style="border-top: 1px solid black;
+               border-bottom: 1px solid black;
+               font-weight: bold;">
+        <td>Malicious Predicted HTTP Domain</td>
+        <td>Count</td>
+    </tr>
+    {% else %}
+    <tr>
+        <td ><a href="https://virustotal.com/gui/search/{{ variable_name }}">{{ variable_name }}</a></td>
+        <td>{{ variable_value }}</td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+</table>
+
+<table cellspacing="0" border="0" id="my-custom-table">
+<tr style="font-size: 20px;
+               text-align:left;
+               border-top: 1px solid black;
+               border-bottom: 1px solid black;
+               font-weight: bold;">
+        <td>Flows</td>
+    {% for a,b in df[2].iterrows()%}
+    {% if loop.index0 == 0 %}
+    <tr style="border-top: 1px solid black;
+               border-bottom: 1px solid black;
+               font-weight: bold;">
+          
+        <td>Flow</td>
+        <td>srcIP</td>
+        <td>dstIP</td>
+        <td>srcPort</td>
+        <td>dstPort</td>
+        <td>Protocol</td>
+        <td>Label</td>
+        <td>Score</td>
+    </tr>
+    {% else %}
+    <tr>
+        <td>{{ a }}</td>
+        <td>{{ b['srcIP'] }}</td>
+        <td>{{ b['dstIP'] }}</td>
+        <td>{{ b['srcPort'] }}</td>
+        <td>{{ b['dstPort'] }}</td>
+        <td>{{ b['l4Proto'] }}</td>
+        <td>{{ b['Label'] }}</td>
+        <td>{{ b['Score'] }}</td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+
+</table>
+
+</body>
+</html>
