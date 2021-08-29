@@ -35,4 +35,4 @@ We assume that older versions and other distributions should work as well as lon
 
 After setup is done, now you should be able to run following commands from the CLI
 
-> `python3.8 predict.py --loadmodel ./model.h5 --pcap sample.pcap`
+> `python predict.py --loadmodel ./model.h5 --pcap sample.pcap`
