@@ -1,5 +1,5 @@
-# Packet Capture Analyzer
-This is an approach to analyze and identify malicious traffic in packet captures 👨‍💻
+# Machine Learning Packet Capture Analyzer
+This is an approach to analyze and identify malicious traffic in packet captures utilizing Machine Learning algorithms 👨‍💻
 :dancer: :coffee:
 
 # Requirements
