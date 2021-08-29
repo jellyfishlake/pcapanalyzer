@@ -17,7 +17,7 @@ processable by Machine Learning algorithms.
 
 ## System
 
-The tool was tested on `Ubuntu 20.04.03 LTS` having Python 3.8 environment installed.
+The tool was tested on `Ubuntu 20.04.03 LTS` having `Python 3.8` environment installed.
 We assume that older versions and other distributions should work as well as long Python3.8 is installed.
 
 # Usage
