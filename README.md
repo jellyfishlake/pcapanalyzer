@@ -1,5 +1,5 @@
-# Packet Capture 👽
-Malware detection program which utilizes deep learning approaches 👨‍💻
+# Packet Capture Analyzer👽
+This is an approach to analyze and identify malicious traffic in packet captures 👨‍💻
 :dancer: :coffee:
 
 # Requirements
