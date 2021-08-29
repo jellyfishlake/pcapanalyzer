@@ -14,6 +14,8 @@ The setup comes with with a small install script. It is recommendend to switch t
 
 Then
 
+> `git clone https://github.com/jellyfishlake/pcapanalyzer.git`
+> `cd pcapanalyzer`
 > `sh setup.sh`
 
 ## Dependencies
@@ -24,7 +26,7 @@ processable by Machine Learning algorithms.
 ## System
 
 The tool was tested on `Ubuntu 20.04.03 LTS` having `Python 3.8` environment installed.
-We assume that older versions and other distributions should work as well as long Python3.8 is installed.
+We assume that older versions and other distributions should work as well as long Python3(.8) is installed.
 
 # Usage
 
