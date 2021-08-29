@@ -7,7 +7,11 @@ related challenges during digital forensic investigations.
 
 The setup comes with with a small install script but some packets like pip and git are required for pre-setup.
 
+<<<<<<< HEAD
 > `sudo apt-get install python3-pip libssl-dev git -y` </br>
+=======
+> `sudo apt-get install python3-pip git -y` </br>
+>>>>>>> 707bb2ddf918498a4782617dffa78634dc31a75e
 
 It is recommendend to switch to a virtual environment to not interfere with current environment.
 
@@ -37,3 +41,7 @@ After setup is done, now you should be able to run following commands from the C
 
 > `python predict.py --model ./trained_model --pcap sample.pcap --mode 1`
 
+<<<<<<< HEAD
+=======
+> `python predict.py --model ./trained_model --pcap sample.pcap`
+>>>>>>> 707bb2ddf918498a4782617dffa78634dc31a75e
