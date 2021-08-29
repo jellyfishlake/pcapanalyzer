@@ -8,7 +8,7 @@ related challenges during digital forensic investigations.
 The setup comes with with a small install script but some packets like pip and git are required for pre-setup.
 
 
-> `sudo apt-get install python3-pip libssl-dev git -y` </br>
+> `sudo apt-get install python3-pip libssl-dev gawk git -y` </br>
 
 
 It is recommendend to switch to a virtual environment to not interfere with current environment.
@@ -40,4 +40,5 @@ After setup is done, now you should be able to run following commands from the C
 
 > `python predict.py --model ./trained_model --pcap sample.pcap --mode 1`
 
+The tool will produce a report for the specified packet capture. The report is created in the same directory in PDF format.
 
