@@ -23,6 +23,10 @@ Then execute the following commands. Please note, that installing Tranalyzer wil
 > `cd pcapanalyzer` </br>
 > `sh setup.sh` </br>
 > `source ~/.bashrc` </br>
+
+You may have to reenter virtualenv again!
+Finally execute the following command in order to get all plugins required:
+
 > `t2build -b plugins.text` 
 
 ## Dependencies
