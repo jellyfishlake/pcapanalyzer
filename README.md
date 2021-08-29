@@ -1,5 +1,5 @@
 # Machine Learning Packet Capture Analyzer
-This is an approach to analyze and identify malicious traffic in packet captures utilizing Machine Learning algorithms 👨‍💻
+In context of a bachelor thesis this is an approach to analyze and identify malicious traffic in packet captures utilizing Machine Learning algorithms 👨‍💻
 :dancer: :coffee:
 
 # Install
@@ -10,13 +10,15 @@ The setup comes with with a small install script.
 
 > `sh setup.sh`
 
-## Tranalyzer
-Tranalyzer is a powerful tool to extract useful information from packet captures like the raw .pcap format.
+## Dependencies
+The most important dependency is the powerful [Tranalyzer](https://tranalyzer.com/about#theanteater) tool. It is able to extract lot of useful information from packet captures 
+like the raw .pcap format. Tranalyzer will help to read packet capture and extract informations in a way, so that it is 
+processable by Machine Learning algorithms.
 
 ## System
 
-The tool was tested on `Ubuntu 20.04 LTS` having Python 3.8 environment installed.
-We assume CentOS/Fedora/Red Hat distributions and more should work as well as long Python3.8 is installed.
+The tool was tested on `Ubuntu 20.04.03 LTS` having Python 3.8 environment installed.
+We assume that older versions and other distributions should work as well as long Python3.8 is installed.
 
 # Usage
 
