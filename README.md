@@ -21,9 +21,9 @@ Then execute the following commands. Please note, that installing Tranalyzer wil
 
 > `git clone https://github.com/jellyfishlake/pcapanalyzer.git` </br>
 > `cd pcapanalyzer` </br>
-> `sh setup.sh`
-> `source ~/.bashrc`
-> `t2build -b plugins.text`
+> `sh setup.sh` </br>
+> `source ~/.bashrc` </br>
+> `t2build -b plugins.text` 
 
 ## Dependencies
 The most important dependency is the powerful [Tranalyzer](https://tranalyzer.com/about#theanteater) tool. It is able to extract lot of useful information from packet captures 
