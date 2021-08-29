@@ -1,4 +1,4 @@
-# Packet Capture Analyzer👽
+# Packet Capture Analyzer
 This is an approach to analyze and identify malicious traffic in packet captures 👨‍💻
 :dancer: :coffee:
 
