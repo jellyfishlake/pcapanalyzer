@@ -5,9 +5,12 @@ The idea behind this project was to contribute digital forensic community and th
 
 # Install
 
-The setup comes with with a small install script. It is recommendend to switch to a virtual environment to not interfere with current environment.
+The setup comes with with a small install script but some packets like pip and git are required for pre-setup.
 
 > `sudo apt-get install python3-pip git -y` </br>
+
+It is recommendend to switch to a virtual environment to not interfere with current environment.
+
 > `sudo pip3 install virtualenv` </br>
 > `virtualenv -p /usr/bin/python3.8 pcapanalyzer` </br>
 > `source pcapanalyzer/bin/activate`
