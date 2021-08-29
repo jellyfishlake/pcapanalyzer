@@ -1,7 +1,7 @@
 # Machine Learning Packet Capture Analyzer
 In context of a bachelor thesis this is an approach to analyze and identify malicious traffic in packet captures utilizing Machine Learning algorithms. 
 The idea behind this project was to contribute digital forensic community and their investigators. 👨‍💻
-:dancer: :coffee:
+:coffee:
 
 # Install
 
