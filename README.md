@@ -5,7 +5,14 @@ The idea behind this project was to contribute digital forensic community and th
 
 # Install
 
-The setup comes with with a small install script. It is recommendend to switch to a virtual environment before installation.
+The setup comes with with a small install script. It is recommendend to switch to a virtual environment to not interfere with existing environments.
+
+> `sudo apt-get install python3-pip`
+> `sudo pip3 install virtualenv`
+> `virtualenv -p /usr/bin/python3.8 pcapanalyzer`
+> `source pcapanalyzer/bin/activate`
+
+Then
 
 > `sh setup.sh`
 
