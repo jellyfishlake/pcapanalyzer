@@ -15,7 +15,7 @@ It is recommendend to switch to a virtual environment to not interfere with curr
 > `virtualenv -p /usr/bin/python3.8 pcapanalyzer` </br>
 > `source pcapanalyzer/bin/activate`
 
-Then
+Then execute the following commands. Please note, that installing Tranalyzer will be installed on the system.
 
 > `git clone https://github.com/jellyfishlake/pcapanalyzer.git` </br>
 > `cd pcapanalyzer` </br>
