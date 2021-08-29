@@ -5,8 +5,6 @@ The idea behind this project was to contribute digital forensic community and th
 
 # Install
 
-##
-
 The setup comes with with a small install script.
 
 > `sh setup.sh`
