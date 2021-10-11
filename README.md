@@ -11,7 +11,7 @@ The setup comes with with a small install script but some packets like pip and g
 > `sudo apt-get install python3-pip libssl-dev gawk git -y` </br>
 
 
-It is recommendend to switch to a virtual environment to not interfere with current environment.
+It is recommended to switch to a virtual environment to not interfere with current environment.
 
 > `sudo pip3 install virtualenv` </br>
 > `virtualenv -p /usr/bin/python3.8 venv` </br>
